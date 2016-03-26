@@ -35,6 +35,7 @@ endif
 call vundle#begin()
 
 Bundle 'Rykka/riv.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 " Vundle plugins loaded
@@ -45,8 +46,8 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 let g:syntastic_python_checkers = ['flake8', 'pep8']
-let g:syntastic_javascript_checkers = ['jshint', 'jslint']
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -59,6 +60,8 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
+
+let g:php_cs_fixer_level = "psr2"
 
 let g:riv_python_rst_hl = 1
 
