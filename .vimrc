@@ -1,5 +1,10 @@
 filetype off
 
+command Wq wq
+command WQ wq
+command W w
+command Q q
+
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -10,13 +15,14 @@ set expandtab
 set statusline=%{GitBranch()}
 set colorcolumn=80
 set number
-"set mouse=a
 set clipboard=unnamedplus
 set ic
+set wildignorecase
 set nobackup
 set noswapfile
 set title
 set undolevels=500
+"set mouse=a
 
 
 let mapleader=","
@@ -34,12 +40,13 @@ endif
 " Vundle
 call vundle#begin()
 
-Bundle 'Rykka/riv.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 " Vundle plugins loaded
-
+"
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_b = '%{fugitive#head()}'
 let g:airline_left_sep=''
@@ -62,8 +69,6 @@ let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
 
 let g:php_cs_fixer_level = "psr2"
-
-let g:riv_python_rst_hl = 1
 
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.pt set filetype=xml
