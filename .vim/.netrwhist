@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/rr/PycharmProjects/ubiwidget/widgets/api_client'
+let g:netrw_dirhist_2='/home/rr/PycharmProjects/ubiwidget'
+let g:netrw_dirhist_3='/home/rr/PycharmProjects/ubiwidget/widgets/templates'
+let g:netrw_dirhist_4='/home/rr/.vim_config/.vim/memory'

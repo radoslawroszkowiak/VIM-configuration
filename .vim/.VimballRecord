@@ -1,0 +1,1 @@
+sgmlendtag.vba: call delete('/home/rroszkowiak/.vim/autoload/sgml.vim')|call delete('/home/rroszkowiak/.vim/doc/sgmlendtag.txt')|call delete('/home/rroszkowiak/.vim/ftplugin/html_sgmlendtag.vim')|call delete('/home/rroszkowiak/.vim/ftplugin/xml_sgmlendtag.vim')
