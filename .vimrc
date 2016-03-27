@@ -124,3 +124,7 @@ let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
 "set autochdir
+"
+let g:vdebug_options = {}
+let g:vdebug_options['port'] = 9001
+let g:vdebug_options['break_on_open'] = 0
