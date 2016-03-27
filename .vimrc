@@ -14,6 +14,7 @@ set colorcolumn=80
 set number
 set clipboard=unnamedplus
 set ic
+set hlsearch
 set wildignorecase
 set nobackup
 set noswapfile
