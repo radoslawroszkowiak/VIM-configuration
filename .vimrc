@@ -111,17 +111,14 @@ let g:NERDCustomDelimiters = {
     \}
 let NERD_html_alt_style = 1
 
-map <C-a>a ggvG<End>
 map <C-p>d Oimport pdb; pdb.set_trace()<Esc>
 map <C-p>i Oimport ipdb; ipdb.set_trace()<Esc>
 map <C-p>r Oimport rpdb; rpdb.set_trace()<Esc>
-map <Leader>, "_
 map <C-p>t :%!tidy -i -xml -q<Enter>
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
-"nnoremap <C-\> :NERDTreeToggle<CR>
 nnoremap <C-\> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.py[cod]$', '__pycache__', '\.idea$']
 
