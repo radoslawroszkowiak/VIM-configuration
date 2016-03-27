@@ -41,6 +41,7 @@ endif
 call vundle#begin()
 
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'joonty/vdebug.git'
 
 call vundle#end()
 " Vundle plugins loaded
@@ -110,3 +111,20 @@ let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
 "set autochdir
+
+let g:vdebug_options['port'] = 9001
+let g:vdebug_options['break_on_open'] = 0
+let g:vdebug_keymap = {
+    \    "run" : "<F5>",
+    \    "run_to_cursor" : "<F6>",
+    \    "step_over" : "<F8>",
+    \    "step_into" : "<F3>",
+    \    "step_out" : "<F4>",
+    \    "close" : "<F9>",
+    \    "detach" : "<F2>",
+    \    "set_breakpoint" : "<F10>",
+    \    "get_context" : "<F11>",
+    \    "eval_under_cursor" : "<F12>",
+    \    "eval_visual" : "<Leader>e",
+    \}
+}
