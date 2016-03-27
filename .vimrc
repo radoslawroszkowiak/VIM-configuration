@@ -39,6 +39,7 @@ call vundle#begin()
 
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/grep.vim'
 
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
@@ -94,8 +95,25 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " End of Split Navigation
 
+"Split Resize
+nnoremap <C-Up> :resize +5<CR>
+nnoremap <C-Down> :resize -5<CR>
+nnoremap <C-Left> :vertical resize -5<CR>
+nnoremap <C-Right> :vertical resize +5<CR>
+"End of Split Resize
+
+map <C-_> <plug>NERDCommenterToggle
+
+let g:NERDCustomDelimiters = {
+    \ 'html': {  'left': '<!-- ', 'right': '-->', 'leftAlt': '/*','rightAlt': '*/'  },
+    \ 'xhtml': {  'left': '<!-- ', 'right': '-->', 'leftAlt': '/*','rightAlt': '*/' }, 
+    \}
+let NERD_html_alt_style = 1
+
 map <C-a>a ggvG<End>
 map <C-p>d Oimport pdb; pdb.set_trace()<Esc>
+map <C-p>i Oimport ipdb; ipdb.set_trace()<Esc>
+map <C-p>r Oimport rpdb; rpdb.set_trace()<Esc>
 map <Leader>, "_
 map <C-p>t :%!tidy -i -xml -q<Enter>
 
@@ -124,7 +142,7 @@ let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
 "set autochdir
-"
+
 let g:vdebug_options = {}
 let g:vdebug_options['port'] = 9001
 let g:vdebug_options['break_on_open'] = 0
