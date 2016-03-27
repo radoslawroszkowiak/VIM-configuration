@@ -5,9 +5,6 @@ command WQ wq
 command W w
 command Q q
 
-execute pathogen#infect()
-call pathogen#helptags()
-
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -22,7 +19,6 @@ set nobackup
 set noswapfile
 set title
 set undolevels=500
-"set mouse=a
 
 
 let mapleader=","
@@ -38,14 +34,31 @@ if $term!="xterm"
 endif
 
 " Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'mileszs/ack.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/syntastic'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'stephpy/vim-php-cs-fixer'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'joonty/vdebug.git'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'michaeljsmith/vim-indent-object'
+
+Plugin 'joonty/vdebug.git'
 
 call vundle#end()
 " Vundle plugins loaded
-"
+
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -111,20 +124,3 @@ let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
 "set autochdir
-
-let g:vdebug_options['port'] = 9001
-let g:vdebug_options['break_on_open'] = 0
-let g:vdebug_keymap = {
-    \    "run" : "<F5>",
-    \    "run_to_cursor" : "<F6>",
-    \    "step_over" : "<F8>",
-    \    "step_into" : "<F3>",
-    \    "step_out" : "<F4>",
-    \    "close" : "<F9>",
-    \    "detach" : "<F2>",
-    \    "set_breakpoint" : "<F10>",
-    \    "get_context" : "<F11>",
-    \    "eval_under_cursor" : "<F12>",
-    \    "eval_visual" : "<Leader>e",
-    \}
-}
