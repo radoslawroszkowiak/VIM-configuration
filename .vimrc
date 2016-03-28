@@ -9,8 +9,10 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set copyindent
+set preserveindent
 set statusline=%{GitBranch()}
-set colorcolumn=80
+set colorcolumn=100
 set number
 set clipboard=unnamedplus
 set ic
@@ -20,6 +22,9 @@ set nobackup
 set noswapfile
 set title
 set undolevels=500
+
+"For Javascript set tab size and indentation = 2
+au FileType javascript setl sw=2 ts=2 sts=2 et
 
 
 let mapleader=","
@@ -45,6 +50,7 @@ Plugin 'vim-scripts/grep.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
 
 Plugin 'scrooloose/nerdtree'
@@ -69,7 +75,7 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 let g:syntastic_python_checkers = ['flake8', 'pep8']
-let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_always_populate_loc_list = 1
@@ -114,6 +120,7 @@ let NERD_html_alt_style = 1
 map <C-p>d Oimport pdb; pdb.set_trace()<Esc>
 map <C-p>i Oimport ipdb; ipdb.set_trace()<Esc>
 map <C-p>r Oimport rpdb; rpdb.set_trace()<Esc>
+
 map <C-p>t :%!tidy -i -xml -q<Enter>
 
 vmap <Tab> >gv
@@ -123,7 +130,7 @@ nnoremap <C-\> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.py[cod]$', '__pycache__', '\.idea$']
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-nnoremap <C-N> :CtrlPMixed<CR>
+nnoremap <S-C-N> :CtrlPMixed<CR>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 " Hit enter in the file browser to open the selected
