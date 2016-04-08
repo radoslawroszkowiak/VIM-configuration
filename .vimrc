@@ -15,7 +15,7 @@ set statusline=%{GitBranch()}
 set colorcolumn=100
 set number
 set clipboard=unnamedplus
-set ic
+set smartcase
 set hlsearch
 set wildignorecase
 set nobackup
