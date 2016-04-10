@@ -4,6 +4,7 @@ command Wq wq
 command WQ wq
 command W w
 command Q q
+command Qa qa
 
 set tabstop=4
 set softtabstop=4
