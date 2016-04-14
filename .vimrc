@@ -24,10 +24,6 @@ set noswapfile
 set title
 set undolevels=500
 
-"For Javascript set tab size and indentation = 2
-au FileType javascript setl sw=2 ts=2 sts=2 et
-
-
 let mapleader=","
 
 syntax on
