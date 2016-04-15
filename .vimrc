@@ -40,10 +40,18 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/grep.vim'
 Plugin 'easymotion/vim-easymotion'
+
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+Plugin 'honza/vim-snippets'
 
 Plugin 'othree/html5.vim'
 Plugin 'Valloric/MatchTagAlways'
@@ -54,8 +62,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
-
-Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -123,12 +129,6 @@ let g:NERDCustomDelimiters = {
     \ 'xhtml': {  'left': '<!-- ', 'right': '-->', 'leftAlt': '/*','rightAlt': '*/' }, 
     \}
 let NERD_html_alt_style = 1
-
-map <C-p>d Oimport pdb; pdb.set_trace()<Esc>
-map <C-p>i Oimport ipdb; ipdb.set_trace()<Esc>
-map <C-p>r Oimport rpdb; rpdb.set_trace()<Esc>
-
-map <C-p>t :%!tidy -i -xml -q<Enter>
 
 vmap <Tab> >gv
 vmap <S-Tab> <gv
