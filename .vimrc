@@ -43,6 +43,7 @@ call vundle#begin()
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/grep.vim'
+Plugin 'easymotion/vim-easymotion'
 
 Plugin 'othree/html5.vim'
 Plugin 'Valloric/MatchTagAlways'
