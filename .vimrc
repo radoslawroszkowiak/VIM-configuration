@@ -45,6 +45,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/grep.vim'
 
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'shawncplus/phpcomplete.vim'
@@ -86,6 +87,7 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
+autocmd FileType python setlocal colorcolumn=80 
 
 let g:php_cs_fixer_level = "psr2"
 
