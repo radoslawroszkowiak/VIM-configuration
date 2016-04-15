@@ -4,6 +4,7 @@ command Wq wq
 command WQ wq
 command W w
 command Q q
+command Qa qa
 
 set tabstop=4
 set softtabstop=4
@@ -15,17 +16,13 @@ set statusline=%{GitBranch()}
 set colorcolumn=100
 set number
 set clipboard=unnamedplus
-set ic
+set smartcase
 set hlsearch
 set wildignorecase
 set nobackup
 set noswapfile
 set title
 set undolevels=500
-
-"For Javascript set tab size and indentation = 2
-au FileType javascript setl sw=2 ts=2 sts=2 et
-
 
 let mapleader=","
 
