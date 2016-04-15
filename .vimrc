@@ -13,7 +13,7 @@ set expandtab
 set copyindent
 set preserveindent
 set statusline=%{GitBranch()}
-set colorcolumn=100
+set colorcolumn=120
 set number
 set clipboard=unnamedplus
 set smartcase
@@ -44,12 +44,17 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/grep.vim'
 
+Plugin 'othree/html5.vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'mattn/emmet-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+
+Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -93,6 +98,8 @@ let g:php_cs_fixer_level = "psr2"
 
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.pt set filetype=xml
+
+inoremap <C-@> <c-x><c-o>
 
 "Split Navigation
 nnoremap <C-J> <C-W><C-J>
