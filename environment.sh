@@ -4,6 +4,8 @@ sudo npm install -g eslint
 sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
 sudo npm install -g eslint-config-airbnb
+sudo npm install -g sass-lint
+
 mv ~/.eslintrc ~/.eslintrc.bak
 cp ./eslintrc ~
 
@@ -20,3 +22,5 @@ sudo echo "<?php
 wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer
 sudo chmod a+x php-cs-fixer
 sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+
+sudo apt-get install tidy

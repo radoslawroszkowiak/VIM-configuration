@@ -16,6 +16,7 @@ set statusline=%{GitBranch()}
 set colorcolumn=120
 set number
 set clipboard=unnamedplus
+set ignorecase
 set smartcase
 set hlsearch
 set wildignorecase
@@ -62,6 +63,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'gcorne/vim-sass-lint'
+Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -87,9 +90,13 @@ let g:airline_right_sep=''
 let g:syntastic_python_checkers = ['flake8', 'pep8']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_sass_checkers=['sass_lint']
+let g:syntastic_html_tidy_exec = 'tidy'
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
+
+let g:php_cs_fixer_level = "psr2"
 
 let g:jedi#goto_command = "<leader>d"
 let g:jedi#goto_assignments_command = "<leader>g"
@@ -101,7 +108,8 @@ let g:jedi#rename_command = "<leader>r"
 autocmd FileType python setlocal completeopt-=preview
 autocmd FileType python setlocal colorcolumn=80 
 
-let g:php_cs_fixer_level = "psr2"
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabLongestHighlight=1
 
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.pt set filetype=xml
@@ -153,7 +161,7 @@ let g:netrw_list_hide = '.*\.swp$,.*\.py[cod]$'
 let g:netrw_liststyle=3
 
 " Change directory to the current buffer when opening files.
-"set autochdir
+set autochdir
 
 let g:vdebug_options = {}
 let g:vdebug_options['port'] = 9001
