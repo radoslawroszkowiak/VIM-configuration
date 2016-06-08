@@ -7,7 +7,7 @@ sudo npm install -g eslint-config-airbnb
 sudo npm install -g sass-lint
 
 mv ~/.eslintrc ~/.eslintrc.bak
-cp ./eslintrc ~
+cp ./.eslintrc ~
 
 sudo pip install pep8 flake8
 
