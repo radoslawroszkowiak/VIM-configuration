@@ -20,11 +20,13 @@
         "indent": [2, 4],
         "strict": 0,
         "quotes": 0,
-        "indent": [2, 4],
         "no-unused-vars": 0,
         "camelcase": 0,
         "no-underscore-dangle": 0
     
     },
-    "extends": "airbnb/legacy"
+    "extends": [
+        "airbnb/legacy",
+        "angular"
+    ]
 }
