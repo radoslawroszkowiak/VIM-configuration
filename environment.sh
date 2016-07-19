@@ -3,6 +3,7 @@
 sudo npm install -g eslint
 sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
+sudo npm install -g eslint-config-angular
 sudo npm install -g eslint-config-airbnb
 sudo npm install -g sass-lint
 
