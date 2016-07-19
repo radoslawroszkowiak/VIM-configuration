@@ -10,11 +10,9 @@
     "settings": {
         "ecmascript": 6,
         "jsx": true
-    
     },
     "plugins": [
         "react"
-    
     ],
     "rules": {
         "indent": [2, 4],
@@ -23,7 +21,6 @@
         "no-unused-vars": 0,
         "camelcase": 0,
         "no-underscore-dangle": 0
-    
     },
     "extends": [
         "airbnb/legacy",
