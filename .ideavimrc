@@ -1,0 +1,40 @@
+filetype off
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set statusline=%{GitBranch()}
+set colorcolumn=80
+set number
+set clipboard=unnamedplus
+set ic
+set nobackup
+set noswapfile
+set title
+set undolevels=1000
+set visualbell
+set noerrorbells
+
+let mapleader=","
+
+syntax on
+filetype indent plugin on
+
+let g:rehash256 = 1
+colorscheme molokai
+if $term!="xterm"
+    set t_Co=256
+    colorscheme molokai
+endif
+
+au BufNewFile,BufRead *.zcml set filetype=xml
+au BufNewFile,BufRead *.pt set filetype=xml
+
+map <C-a>a ggvG<End>
+map <C-p>d Oimport pdb; pdb.set_trace()<Esc>
+map <Leader>, "_
+map <C-p>t :%!tidy -i -xml -q<Enter>
+
+map <Tab> >gv
+map <S-Tab> <gv
